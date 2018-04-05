@@ -35,12 +35,9 @@ class HtmlHelper
         $this->_domDocument = new DOMDocument('1.0', 'UTF-8');
         if (!$this->_domDocument->loadHTML($html, LIBXML_NOERROR))
         {
-            /**
-             * Should never be thrown..
-             *
-             * @codeCoverageIgnore
-             */
+            // @codeCoverageIgnoreStart
             throw new InvalidHtmlException($html);
+            // @codeCoverageIgnoreEnd
         }
     }
 
@@ -88,7 +85,7 @@ class HtmlHelper
             $meta = $metaAttributes->item($i);
             $this->_setMetaAttribute(\mb_strtolower($meta->getAttribute('name')), $meta->getAttribute('content'));
 
-            $i ++;
+            $i++;
         }
     }
 

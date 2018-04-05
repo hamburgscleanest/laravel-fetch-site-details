@@ -10,6 +10,8 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class LaravelFetchSiteDetailsServiceProvider
  * @package hamburgscleanest\LaravelFetchSiteDetails
+ *
+ * @codeCoverageIgnore
  */
 class LaravelFetchSiteDetailsServiceProvider extends ServiceProvider
 {

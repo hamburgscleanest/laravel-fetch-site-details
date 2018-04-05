@@ -36,20 +36,28 @@ $website = LaravelSiteDetails::fetch('https://www.reddit.com/');
 
 #### The following information is available:
 
-```php
-echo $website->title; // title of the website -> 'reddit: the front page of the internet'
-```
+The title of the website.
 
 ```php
-echo $website->description; // website's description -> 'reddit: the front page of the internet'
+echo $website->title; // 'reddit: the front page of the internet'
 ```
 
-```php
-echo $website->keywords; // Meta keywords that were defined for the website -> ['reddit', 'reddit.com', 'vote', 'comment', 'submit']
-```
+The website's description.
 
 ```php
-echo $website->language; // language of the website -> 'en'
+echo $website->description; // 'reddit: the front page of the internet'
+```
+
+Meta keywords that were defined for the website.
+
+```php
+echo $website->keywords; // ['reddit', 'reddit.com', 'vote', 'comment', 'submit']
+```
+
+The language of the website.
+
+```php
+echo $website->language; // 'en'
 ```
 
 ----------

@@ -36,6 +36,14 @@ class HtmlHelperTest extends TestCase
         $this->assertEquals($title, $htmlHelper->getTitle());
         $this->assertEquals($description, $htmlHelper->getDescription());
         $this->assertEquals($keywords, $htmlHelper->getKeywords());
+
+        // Change the order of 'description' and 'keywords'..
+        $htmlHelper = new HtmlHelper($html);
+
+        $this->assertEquals($language, $htmlHelper->getLanguage());
+        $this->assertEquals($title, $htmlHelper->getTitle());
+        $this->assertEquals($keywords, $htmlHelper->getKeywords());
+        $this->assertEquals($description, $htmlHelper->getDescription());
     }
 
 }
